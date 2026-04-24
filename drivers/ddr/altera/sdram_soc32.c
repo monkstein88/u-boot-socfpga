@@ -57,7 +57,7 @@ void sdram_init_ecc_bits(void)
 		size -= size_init;
 		start_addr += size_init;
 
-		if(IS_ENABLED(CONFIG_HW_WATCHDOG)) {
+#if defined(CONFIG_HW_WATCHDOG)
 			/*
 			 * In case the watchdog is enabled,
 			 * make sure to (re-)configure watchdog
@@ -65,7 +65,7 @@ void sdram_init_ecc_bits(void)
 			 */
 			debug("%s: %d\n", __func__, __LINE__);
 			hw_watchdog_init();
-		} else {
+#else
 			/*
 			 * If the HW watchdog is NOT enabled,
 			 * make sure it is not running, because
@@ -75,7 +75,7 @@ void sdram_init_ecc_bits(void)
 			debug("%s: %d\n", __func__, __LINE__);
 			socfpga_per_reset(SOCFPGA_RESET(L4WD0), 1);
 			socfpga_per_reset(SOCFPGA_RESET(L4WD0), 0);
-		}
+#endif
 	}
 
 	dcache_disable();

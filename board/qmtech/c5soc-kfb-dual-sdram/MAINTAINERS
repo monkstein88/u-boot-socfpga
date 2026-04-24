@@ -1,0 +1,6 @@
+QMTECH Cyclone V SoC KFB with Dual SDRAM board
+M:	Monk M. <monkstein88@gmail.com>
+S:	Maintained
+F:	board/qmtech/c5soc-kfb-dual-sdram/
+F:	include/configs/socfpga_c5soc_kfb_dual_sdram.h
+F:	configs/socfpga_c5soc_kfb_dual_sdram_defconfig
