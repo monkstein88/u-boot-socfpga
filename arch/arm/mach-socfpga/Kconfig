@@ -355,7 +355,7 @@ config SYS_BOARD
 	default "sr1500" if TARGET_SOCFPGA_SR1500
 	default "stratix10-socdk" if TARGET_SOCFPGA_STRATIX10_SOCDK
 	default "vining_fpga" if TARGET_SOCFPGA_SOFTING_VINING_FPGA
-        default "c5soc-kfb-dual-sdram" if TARGET_SOCFPGA_QMTECH_C5SOC_KFB_DUAL_SDRAM
+	default "c5soc-kfb-dual-sdram" if TARGET_SOCFPGA_QMTECH_C5SOC_KFB_DUAL_SDRAM
 
 config SYS_VENDOR
 	default "intel" if TARGET_SOCFPGA_AGILEX7M_SOCDK
@@ -379,6 +379,7 @@ config SYS_VENDOR
 	default "terasic" if TARGET_SOCFPGA_TERASIC_DE10_STANDARD
 	default "terasic" if TARGET_SOCFPGA_TERASIC_SOCKIT
 	default "qmtech" if TARGET_SOCFPGA_QMTECH_C5SOC_KFB_DUAL_SDRAM
+
 config SYS_SOC
 	default "socfpga"
 

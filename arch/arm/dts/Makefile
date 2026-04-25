@@ -420,6 +420,7 @@ dtb-$(CONFIG_ARCH_SOCFPGA) +=				\
 	socfpga_cyclone5_socrates.dtb			\
 	socfpga_cyclone5_sr1500.dtb			\
 	socfpga_cyclone5_vining_fpga.dtb		\
+	socfpga_cyclone5__kfb_dual_sdram.dtb		\
 	socfpga_n5x_socdk.dtb				\
 	socfpga_stratix10_socdk.dtb			\
 	socfpga_stratix10_socdk_nand.dtb                \
