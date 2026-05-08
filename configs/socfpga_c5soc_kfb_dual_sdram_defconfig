@@ -24,8 +24,8 @@ CONFIG_BOOTDELAY=2
 # entries are out of physical order (a2 preloader at sdb3 but physically
 # first), causing spurious "Bad device specification mmc -bootable" warning.
 CONFIG_BOOTCOMMAND="sysboot mmc 0:1 any ${scriptaddr} /extlinux/extlinux.conf"
-# Optional: prevent console from interrupting autoboot
-CONFIG_AUTOBOOT_KEYED=n
+# Optional: prevent console from interrupting autoboot - disabled
+# CONFIG_AUTOBOOT_KEYED is not set
 CONFIG_DEFAULT_FDT_FILE="socfpga_cyclone5_kfb_dual_sdram.dtb"
 CONFIG_SYS_CONSOLE_IS_IN_ENV=y
 CONFIG_SYS_CONSOLE_OVERWRITE_ROUTINE=y
