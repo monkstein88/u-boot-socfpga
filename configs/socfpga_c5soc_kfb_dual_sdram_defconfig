@@ -19,11 +19,9 @@ CONFIG_DISTRO_DEFAULTS=y
 CONFIG_USE_BOOTCOMMAND=y
 # Disable bootdelay countdown
 CONFIG_BOOTDELAY=2
-# Boot command - adjust to your storage medium and kernel location
-# Bypass distro_bootcmd part find -bootable probe; SD partition table
-# entries are out of physical order (a2 preloader at sdb3 but physically
-# first), causing spurious "Bad device specification mmc -bootable" warning.
-CONFIG_BOOTCOMMAND="sysboot mmc 0:1 any ${scriptaddr} /extlinux/extlinux.conf"
+# Boot command - adjust to your storage medium - fpga configuration and kernel location
+# Bypass distro_bootcmd part find -bootable probe; SD partition table entries are out of physical order (a2 preloader at sdb3 but physically (first), causing spurious "Bad device specification mmc -bootable" warning.
+CONFIG_BOOTCOMMAND="load mmc 0:1 ${loadaddr} soc_system.rbf && fpga load 0 ${loadaddr} $filesize; sysboot mmc 0:1 any ${scriptaddr} /extlinux/extlinux.conf"
 # Optional: prevent console from interrupting autoboot - disabled
 # CONFIG_AUTOBOOT_KEYED is not set
 CONFIG_DEFAULT_FDT_FILE="socfpga_cyclone5_kfb_dual_sdram.dtb"
